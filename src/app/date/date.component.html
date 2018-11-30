@@ -1,0 +1,75 @@
+<div [class.global]="true">
+  <p>Hello {{ name }}, today is {{ message }}!</p>
+  
+  <!-->ngFor<-->
+  
+  <ul>
+    <li *ngFor="let _item of items; let _index = index; let _first = first; let _last = last; let _even = even; let _odd = odd" 
+        [ngClass]= "{first_style:_first, last_style:_last, even_style:_even, odd_style:_odd}">
+        {{_index}} {{_first}} {{_item}} {{_last}}
+    </li>
+  </ul>
+
+   <!-->ngIf<-->
+  
+<!-->div *ngIf="loggedIn">
+  Logged in.
+</div--> 
+
+<div *ngIf="loggedIn; else loggedOut">
+  Logged in.
+
+  <button (click)="onEventClick($event)">event</button>
+</div> 
+
+<ng-template #loggedOut>
+  Logged out.
+</ng-template>
+
+ <div *ngIf="loggedIn; then dLoggedIn; else dLoggedOut"></div>
+  <ng-template #dLoggedIn>
+        I am in.
+  </ng-template>
+  <ng-template #dLoggedOut>
+        I am out.
+  </ng-template>
+
+
+<button *ngIf="collapsed" (click)="toggleCollapse()">Развернуть</button>
+<button *ngIf="!collapsed" (click)="toggleCollapse()">Свернуть</button>
+  <div *ngIf="!collapsed">
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima 
+    porro sed, ut nobis facere itaque nesciunt aperiam reiciendis od
+    it magni maxime cum assumenda, commodi eum, veritatis quas fugak 
+    laborum impedit.
+    </p>  
+  </div>
+
+<!-- one way -->
+<div>
+    <input type="text" [ngModel]="ztext">
+    <p>{{ztext}}</p>
+</div>
+
+<!-- both way -->
+<div>
+    <input type="text" [(ngModel)]="ztext">
+    <p>{{ztext}}</p>
+</div>
+<!--classes-->
+<div [ngClass]="{'class1': true}">
+  <h1>Microtolla</h1>
+  <h2 [class.class3]="true">Microtolla</h2>
+  <h3 [ngStyle]="{'color':'pink'}">Lorem ipsum</h3>
+  <p [ngClass]="{'class2': true}"> 
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi vel quo nam neque iste fuga a quia ratione. Error veritatis reprehenderit laudantium reiciendis vel iure ullam odit quibusdam quia fuga mollitia officiis, quas cumque? Nobis odio laborum dolore magni totam. Explicabo quos, veniam illum accusantium eum inventore maiores consequatur error?
+  </p>
+
+  <p [ngClass]="{invisible: visibility}"> 
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi vel quo nam neque iste fuga a quia ratione. Error veritatis reprehenderit laudantium reiciendis vel iure ullam odit quibusdam quia fuga mollitia officiis, quas cumque? Nobis odio laborum dolore magni totam. Explicabo quos, veniam illum accusantium eum inventore maiores consequatur error?
+  </p>
+  <button (click)="toggle()">Toggle</button>
+</div>
+
+</div>

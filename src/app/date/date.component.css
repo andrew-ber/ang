@@ -1,0 +1,32 @@
+.first_style{
+    font-size: 14px;
+    font-weight: bold;
+}
+.last_style{
+    font-size: 14px;
+    font-weight: bold;
+}
+.even_style{
+    
+    font-size: 14px;
+    background-color: lightgray;
+}
+.odd_style{
+    font-size: 14px;
+    background-color: lightskyblue;
+}
+.class1{
+    color: red;
+}
+.class2{
+    color: blue;
+}
+.class3{
+    color: green;
+}
+.global{
+    background-color: whitesmoke;
+}
+.invisible{
+    display: none;
+}

@@ -1,0 +1,9 @@
+<H1>News</H1>
+<p>
+  my-widget-component works!
+</p>
+user name: <input type="text" [(ngModel)]="userName">
+<button (click)="search()">search</button>
+<div *ngIf="response">
+  <img src="{{response.avatar_url}}"/> 
+</div>
