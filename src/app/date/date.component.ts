@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CloudService } from '../cloud.service';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+@Input()
 
 @Component({
   selector: 'app-date',

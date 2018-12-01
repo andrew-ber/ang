@@ -3,7 +3,7 @@
   my-widget-component works!
 </p>
 user name: <input type="text" [(ngModel)]="userName">
-<button (click)="search()">search</button>
+<button mat-button (click)="search()">search</button>
 <div *ngIf="response">
   <img src="{{response.avatar_url}}"/> 
 </div>

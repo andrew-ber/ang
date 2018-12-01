@@ -19,7 +19,7 @@
 <div *ngIf="loggedIn; else loggedOut">
   Logged in.
 
-  <button (click)="onEventClick($event)">event</button>
+  <button mat-button (click)="onEventClick($event)">event</button>
 </div> 
 
 <ng-template #loggedOut>
@@ -35,8 +35,8 @@
   </ng-template>
 
 
-<button *ngIf="collapsed" (click)="toggleCollapse()">Развернуть</button>
-<button *ngIf="!collapsed" (click)="toggleCollapse()">Свернуть</button>
+<button mat-button *ngIf="collapsed" (click)="toggleCollapse()">Развернуть</button>
+<button mat-button *ngIf="!collapsed" (click)="toggleCollapse()">Свернуть</button>
   <div *ngIf="!collapsed">
     <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima 
@@ -72,4 +72,20 @@
   <button (click)="toggle()">Toggle</button>
 </div>
 
+
+<div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Input">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </div>
