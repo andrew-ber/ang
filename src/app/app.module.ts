@@ -19,8 +19,11 @@ import { MyWidgetComponentComponent } from './my-widget-component/my-widget-comp
 import { DateComponent } from './date/date.component';
 import { ButtonsComponent } from './buttons/buttons.component'
 
+import { CookieService } from 'ngx-cookie-service'
+
 import { CloudService } from './cloud.service';
 import { HttpClient } from 'selenium-webdriver/http';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +51,7 @@ import { HttpClient } from 'selenium-webdriver/http';
     MatIconModule,
     MatInputModule
   ],
-  providers: [CloudService],
+  providers: [CloudService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,18 @@
 <H1>News</H1>
-<p>
-  my-widget-component works!
-</p>
-user name: <input type="text" [(ngModel)]="userName">
-<button mat-button (click)="search()">search</button>
-<div *ngIf="response">
+<mat-form-field>
+  <input matInput type="text" [(ngModel)]="userName" placeholder="User name">
+</mat-form-field>
+  <button mat-button (click)="search()">search</button>
+
+<!-->div *ngIf="response">
   <img src="{{response.avatar_url}}"/> 
+  <pre>{{response | json}}</pre>
+</div-->
+
+<div *ngIf="posts">
+    <pre>{{posts | json}}</pre>
+</div>
+  
+<div *ngIf="error">
+    <pre>{{error | json}}</pre>
 </div>
